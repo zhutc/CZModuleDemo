@@ -82,6 +82,27 @@
 			remoteGlobalIDString = F52B57801D59BC9A005EA463;
 			remoteInfo = CZModuleDemo;
 		};
+		F52B58751D59E134005EA463 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F52B57DB1D59BE06005EA463 /* ModuleA.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F52B58651D59DD80005EA463;
+			remoteInfo = ModuleABundle;
+		};
+		F52B58781D59E134005EA463 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F52B57E11D59BE0E005EA463 /* ModuleB.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F52B585B1D59DD6E005EA463;
+			remoteInfo = ModuleBBundle;
+		};
+		F52B587B1D59E134005EA463 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F52B57E71D59BE13005EA463 /* ModuleC.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F52B58511D59DD54005EA463;
+			remoteInfo = ModuleCBundle;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -178,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				F52B57E01D59BE06005EA463 /* libModuleA.a */,
+				F52B58761D59E134005EA463 /* ModuleABundle.bundle */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -186,6 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				F52B57E61D59BE0E005EA463 /* libModuleB.a */,
+				F52B58791D59E134005EA463 /* ModuleBBundle.bundle */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -194,6 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				F52B57EC1D59BE13005EA463 /* libModuleC.a */,
+				F52B587C1D59E134005EA463 /* ModuleCBundle.bundle */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -225,6 +249,7 @@
 				F52B577D1D59BC9A005EA463 /* Sources */,
 				F52B577E1D59BC9A005EA463 /* Frameworks */,
 				F52B577F1D59BC9A005EA463 /* Resources */,
+				F52B58731D59E134005EA463 /* Copy Module Bundle */,
 			);
 			buildRules = (
 			);
@@ -341,6 +366,27 @@
 			remoteRef = F52B58151D59C7DF005EA463 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		F52B58761D59E134005EA463 /* ModuleABundle.bundle */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ModuleABundle.bundle;
+			remoteRef = F52B58751D59E134005EA463 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F52B58791D59E134005EA463 /* ModuleBBundle.bundle */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ModuleBBundle.bundle;
+			remoteRef = F52B58781D59E134005EA463 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F52B587C1D59E134005EA463 /* ModuleCBundle.bundle */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ModuleCBundle.bundle;
+			remoteRef = F52B587B1D59E134005EA463 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -361,6 +407,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F52B58731D59E134005EA463 /* Copy Module Bundle */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Module Bundle";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "echo \"tczhu copy module bundle begin\"\nmodules=( \"ModuleA\" \"ModuleB\" \"ModuleC\" )\ncd  $CONFIGURATION_BUILD_DIR\nfor file in ${modules[@]}\ndo\n    if [ -d \"$file\"\"Bundle.Bundle\" ]\n    then\n        rm ${file}\"Bundle.Bundle/info.plist\"\n        cp -rf ${file}\"Bundle.Bundle/\"  $CONTENTS_FOLDER_PATH\n    fi\ndone\necho \"tczhu copy module bundle end\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F52B577D1D59BC9A005EA463 /* Sources */ = {

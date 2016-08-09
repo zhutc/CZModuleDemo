@@ -14,8 +14,7 @@
     id result = nil;
     if ([identifier isEqualToString:@"C/MainVC"])
     {
-        ModuleViewControllerC* vc = [[ModuleViewControllerC alloc] init];
-        vc.view.backgroundColor = [UIColor redColor];
+        ModuleViewControllerC* vc = [[ModuleViewControllerC alloc] initWithNibName:@"ModuleViewControllerC" bundle:nil];
         vc.title = @"C";
 
         return vc;

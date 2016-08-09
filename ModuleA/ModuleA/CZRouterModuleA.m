@@ -23,8 +23,7 @@
         return tabVC;
     }else if ([identifier isEqualToString:@"A/MainVC"])
     {
-        ModuleViewControllerA* vc = [[ModuleViewControllerA alloc] init];
-        vc.view.backgroundColor = [UIColor blueColor];
+        ModuleViewControllerA* vc = [[ModuleViewControllerA alloc] initWithNibName:@"ModuleViewControllerA" bundle:nil];
         vc.title = @"A";
         return vc;
     }
