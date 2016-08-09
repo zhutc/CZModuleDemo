@@ -7,7 +7,28 @@
 //
 
 #import "CZRouterModuleA.h"
-
+#import <UIKit/UIKit.h>
+#import "ModuleViewControllerA.h"
 @implementation CZRouterModuleA
+-(id)doAsyncTaskWithIdentifier:(NSString *)identifier done:(void (^)(id, NSError *))doneBlock paramters:(id)param
+{
+    return nil;
+}
+
+-(id)doTaskWithIdentifier:(NSString *)identifier paramters:(id)param
+{
+    id result = nil;
+    if ([identifier isEqualToString:@"A/rootTabbarViewController"]) {
+        UITabBarController* tabVC = [[UITabBarController alloc] init];
+        return tabVC;
+    }else if ([identifier isEqualToString:@"A/MainVC"])
+    {
+        ModuleViewControllerA* vc = [[ModuleViewControllerA alloc] init];
+        vc.view.backgroundColor = [UIColor blueColor];
+        vc.title = @"A";
+        return vc;
+    }
+    return result;
+}
 
 @end

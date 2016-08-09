@@ -8,7 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		F52B582B1D59C8BE005EA463 /* CZRouterModuleC.m in Sources */ = {isa = PBXBuildFile; fileRef = F52B582A1D59C8BE005EA463 /* CZRouterModuleC.m */; };
+		F52B584C1D59DCCB005EA463 /* ModuleViewControllerC.m in Sources */ = {isa = PBXBuildFile; fileRef = F52B584A1D59DCCB005EA463 /* ModuleViewControllerC.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F52B586B1D59DDE2005EA463 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F52B57C61D59BDBA005EA463 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F52B58501D59DD54005EA463;
+			remoteInfo = ModuleCBundle;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		F52B57CC1D59BDBA005EA463 /* CopyFiles */ = {
@@ -26,10 +37,22 @@
 		F52B57CE1D59BDBA005EA463 /* libModuleC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libModuleC.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F52B58291D59C8BE005EA463 /* CZRouterModuleC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZRouterModuleC.h; sourceTree = "<group>"; };
 		F52B582A1D59C8BE005EA463 /* CZRouterModuleC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZRouterModuleC.m; sourceTree = "<group>"; };
+		F52B58491D59DCCB005EA463 /* ModuleViewControllerC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModuleViewControllerC.h; sourceTree = "<group>"; };
+		F52B584A1D59DCCB005EA463 /* ModuleViewControllerC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModuleViewControllerC.m; sourceTree = "<group>"; };
+		F52B584B1D59DCCB005EA463 /* ModuleViewControllerC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ModuleViewControllerC.xib; sourceTree = "<group>"; };
+		F52B58511D59DD54005EA463 /* ModuleCBundle.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ModuleCBundle.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		F52B58531D59DD54005EA463 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		F52B57CB1D59BDBA005EA463 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F52B584E1D59DD54005EA463 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -42,7 +65,9 @@
 		F52B57C51D59BDBA005EA463 = {
 			isa = PBXGroup;
 			children = (
+				F52B583C1D59D7C6005EA463 /* UI */,
 				F52B57D01D59BDBA005EA463 /* ModuleC */,
+				F52B58521D59DD54005EA463 /* ModuleCBundle */,
 				F52B57CF1D59BDBA005EA463 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -51,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				F52B57CE1D59BDBA005EA463 /* libModuleC.a */,
+				F52B58511D59DD54005EA463 /* ModuleCBundle.bundle */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -62,6 +88,24 @@
 				F52B582A1D59C8BE005EA463 /* CZRouterModuleC.m */,
 			);
 			path = ModuleC;
+			sourceTree = "<group>";
+		};
+		F52B583C1D59D7C6005EA463 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				F52B58491D59DCCB005EA463 /* ModuleViewControllerC.h */,
+				F52B584A1D59DCCB005EA463 /* ModuleViewControllerC.m */,
+				F52B584B1D59DCCB005EA463 /* ModuleViewControllerC.xib */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		F52B58521D59DD54005EA463 /* ModuleCBundle */ = {
+			isa = PBXGroup;
+			children = (
+				F52B58531D59DD54005EA463 /* Info.plist */,
+			);
+			path = ModuleCBundle;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -78,11 +122,29 @@
 			buildRules = (
 			);
 			dependencies = (
+				F52B586C1D59DDE2005EA463 /* PBXTargetDependency */,
 			);
 			name = ModuleC;
 			productName = ModuleC;
 			productReference = F52B57CE1D59BDBA005EA463 /* libModuleC.a */;
 			productType = "com.apple.product-type.library.static";
+		};
+		F52B58501D59DD54005EA463 /* ModuleCBundle */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F52B58541D59DD54005EA463 /* Build configuration list for PBXNativeTarget "ModuleCBundle" */;
+			buildPhases = (
+				F52B584D1D59DD54005EA463 /* Sources */,
+				F52B584E1D59DD54005EA463 /* Frameworks */,
+				F52B584F1D59DD54005EA463 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ModuleCBundle;
+			productName = ModuleCBundle;
+			productReference = F52B58511D59DD54005EA463 /* ModuleCBundle.bundle */;
+			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
 
@@ -94,6 +156,9 @@
 				ORGANIZATIONNAME = tczhu;
 				TargetAttributes = {
 					F52B57CD1D59BDBA005EA463 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					F52B58501D59DD54005EA463 = {
 						CreatedOnToolsVersion = 7.3.1;
 					};
 				};
@@ -111,20 +176,47 @@
 			projectRoot = "";
 			targets = (
 				F52B57CD1D59BDBA005EA463 /* ModuleC */,
+				F52B58501D59DD54005EA463 /* ModuleCBundle */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F52B584F1D59DD54005EA463 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F52B57CA1D59BDBA005EA463 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F52B584C1D59DCCB005EA463 /* ModuleViewControllerC.m in Sources */,
 				F52B582B1D59C8BE005EA463 /* CZRouterModuleC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F52B584D1D59DD54005EA463 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F52B586C1D59DDE2005EA463 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F52B58501D59DD54005EA463 /* ModuleCBundle */;
+			targetProxy = F52B586B1D59DDE2005EA463 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		F52B57D51D59BDBA005EA463 /* Debug */ = {
@@ -229,6 +321,38 @@
 			};
 			name = Release;
 		};
+		F52B58551D59DD54005EA463 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ModuleCBundle/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = com.CZ.ModuleCBundle;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		F52B58561D59DD54005EA463 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ModuleCBundle/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = com.CZ.ModuleCBundle;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -249,6 +373,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		F52B58541D59DD54005EA463 /* Build configuration list for PBXNativeTarget "ModuleCBundle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F52B58551D59DD54005EA463 /* Debug */,
+				F52B58561D59DD54005EA463 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

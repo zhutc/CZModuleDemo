@@ -37,7 +37,8 @@
         NSArray* modules = @[@"A",@"B",@"C"];
         for (NSString* name in modules) {
             NSString* className = [@"CZRouterModule" stringByAppendingString:name];
-            id routerObject = [[NSClassFromString(className) alloc] init];
+            Class class = NSClassFromString(className);
+            id routerObject = [[class alloc] init];
             if (routerObject) {
                 [router.routerDictionary setObject:routerObject forKey:name];
             }
@@ -47,7 +48,9 @@
 
 +(CZRouterObject*)routerObjectWithIdentifier:(NSString*)identifier
 {
-    return nil;
+    NSUInteger sepIndex = [identifier rangeOfString:@"/"].location;
+    NSString* name = [identifier substringToIndex:sepIndex];
+    return [[CZRouter shareRouter].routerDictionary objectForKey:name];
 }
 
 

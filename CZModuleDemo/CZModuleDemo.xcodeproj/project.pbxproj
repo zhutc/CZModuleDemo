@@ -518,6 +518,11 @@
 				);
 				INFOPLIST_FILE = CZModuleDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-all_load",
+					"-OjbC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.CZ.CZModuleDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/**";
@@ -536,6 +541,11 @@
 				);
 				INFOPLIST_FILE = CZModuleDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-all_load",
+					"-OjbC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.CZ.CZModuleDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/**";
@@ -549,6 +559,10 @@
 				HEADER_SEARCH_PATHS = "${SRCROOT}/../**";
 				INFOPLIST_FILE = CZModuleDemoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-OjbC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.CZ.CZModuleDemoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CZModuleDemo.app/CZModuleDemo";
@@ -562,6 +576,10 @@
 				HEADER_SEARCH_PATHS = "${SRCROOT}/../**";
 				INFOPLIST_FILE = CZModuleDemoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-OjbC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.CZ.CZModuleDemoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CZModuleDemo.app/CZModuleDemo";
