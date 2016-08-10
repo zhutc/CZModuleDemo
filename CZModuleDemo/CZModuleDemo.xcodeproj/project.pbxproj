@@ -421,7 +421,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "echo \"tczhu copy module bundle begin\"\nmodules=( \"ModuleA\" \"ModuleB\" \"ModuleC\" )\ncd  $CONFIGURATION_BUILD_DIR\nfor file in ${modules[@]}\ndo\n    if [ -d \"$file\"\"Bundle.Bundle\" ]\n    then\n        rm ${file}\"Bundle.Bundle/info.plist\"\n        cp -rf ${file}\"Bundle.Bundle/\"  $CONTENTS_FOLDER_PATH\n    fi\ndone\necho \"tczhu copy module bundle end\"\n";
+			shellScript = "modules=( \"ModuleA\" \"ModuleB\" \"ModuleC\" )\ncd  $CONFIGURATION_BUILD_DIR\nfor file in ${modules[@]}\ndo\n    if [ -d \"$file\"\"Bundle.Bundle\" ]\n    then\n        rm ${file}\"Bundle.Bundle/info.plist\"\n        cp -rf ${file}\"Bundle.Bundle/\"  $CONTENTS_FOLDER_PATH\n    fi\ndone\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -668,6 +668,7 @@
 				F52B579A1D59BC9A005EA463 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F52B58371D59CFAF005EA463 /* Build configuration list for PBXNativeTarget "CZModuleDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -676,6 +677,7 @@
 				F52B58391D59CFAF005EA463 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
